@@ -1,0 +1,13 @@
+<h1>My Bitcoin Addresses</h1>
+
+<ul>
+  <% @addresses.each do |address| %>
+    <li>
+      <%= link_to address.name.capitalize, address_path(address) %>
+      <%= link_to 'Edit', edit_address_path(address) %>
+      <%= link_to 'Delete', address, method: :delete, data: {confirm: 'Are you sure?'} %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Add a new address', new_address_path %>
