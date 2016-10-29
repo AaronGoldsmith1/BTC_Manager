@@ -1,7 +1,7 @@
-class UserController < ApplicationController
-
-  class UsersController < ApplicationController
+class UsersController < ApplicationController
     before_action :set_user, only: [:show, :edit, :update, :destroy]
+
+    
 
     def index
       @users = User.all
@@ -55,7 +55,3 @@ class UserController < ApplicationController
       @user = User.find(params[:id])
     end
   end
-
-
-
-end
