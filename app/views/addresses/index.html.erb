@@ -3,7 +3,7 @@
 <ul>
   <% @addresses.each do |address| %> <%# @addresses.each.title ? %>
     <li>
-      <%= link_to address.title.capitalize, address_path(address) %>
+      <%= link_to address.label.capitalize, address_path(address) %>
       <%= link_to 'Edit', edit_address_path(address) %>
       <%= link_to 'Delete', address, method: :delete, data: {confirm: 'Are you sure?'} %>
     </li>

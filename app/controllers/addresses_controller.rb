@@ -26,9 +26,12 @@ class AddressesController < ApplicationController
     end
 
     def edit
+      @address = Address.find(params[:id])
+
     end
 
     def update
+      @address = Address.find(params[:id])
       if @address.update_attributes(address_params)
         redirect_to @address
       else
