@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   patch 'addresses/:id' => 'addresses#update'
   delete 'addresses/:id' => 'addresses#destroy'
 
-
+  # resources :users do
+  #   resources :addresses   ???
 
 
 
