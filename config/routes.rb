@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
 
+  get 'addresses/' => 'addresses#index'
+  post 'addresses/' => 'addresses#create'
+  get 'addresses/new' => 'addresses#new', as: :new_address
+  get 'addresses/:id' => 'addresses#show', as: :address
+  get 'addresses/:id/edit' => 'addresses#edit', as: :edit_address
+  put 'addresses/:id' => 'addresses#update'
+  patch 'addresses/:id' => 'addresses#update'
+  delete 'addresses/:id' => 'addresses#destroy'
+
+
+
+
 
 post 'signup' => 'users#create'
 
