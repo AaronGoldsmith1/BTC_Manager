@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   def new
+
   end
 
   def create
@@ -7,9 +8,10 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:login][:password])
       #set a cookie, so our browser knows we are who we say we are
       session[:user_id] = user.id.to_s
-      redirect_to users_path
+      render json: session
+      #redirect_to users_path
     else
-      render :new
+      render json:user
     end
   end
 

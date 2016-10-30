@@ -5,19 +5,23 @@ class AddressesController < ApplicationController
     end
 
     def show
+      @address = Address.find(params[:id])
     end
 
     def new
       @address = Address.new
+      @user_id = session[:user_id]
     end
 
     def create
       @address = Address.new(address_params)
+        @address.user_id = session[:user_id]
 
       if @address.save
-        redirect_to @address
+        #render json: @address
+        redirect_to action: "show", id: @address.id
       else
-        render :new
+        render json:@address
       end
     end
 
