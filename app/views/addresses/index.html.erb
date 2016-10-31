@@ -15,16 +15,22 @@
   </div>
 </nav>
 
+<div class="container">
 <h1>My Bitcoin Addresses</h1>
-
-<ul>
-  <% @addresses.each do |address| %> <%# @addresses.each.title ? %>
-    <li>
-      <%= link_to address.label.capitalize, address_path(address) %>
+<% @addresses.each do |address| %> <%# @addresses.each.title ? %>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Address:</th>
+        </tr>
+      </thead>
+      <tbody>
+    <tr><td> <%= link_to address.label.capitalize, address_path(address) %>
       <%= link_to 'Edit', edit_address_path(address) %>
       <%= link_to 'Delete', address, method: :delete, data: {confirm: 'Are you sure?'} %>
-    </li>
+    </td></tr>
   <% end %>
-</ul>
-
+</tbody>
+</table>
+</div>
 <%= link_to 'Add a new address', new_address_path %>

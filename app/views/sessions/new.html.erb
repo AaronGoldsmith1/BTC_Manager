@@ -10,51 +10,16 @@
 
 
 
-<%= form_for :login do |f| %>
-
-
-<div class="container">
-<div class="jumbotron col-md-6">
-  <h1>Sign up</h1>
-  <div class="form-group">
-    <label>Name:</label>
-    <%= f.text_field :name, :class=>"form-control"  %>
-  </div>
-  <div class="form-group">
-    <label>Email:</label>
-    <%= f.text_field :email, :class=>"form-control"  %>
-  </div>
-  <div class="form-group">
-    <label>Password:</label>
-    <%= f.password_field :password, :class=>"form-control"  %>
-  </div>
-  <div class="form-group">
-    <label>Confirm Password:</label>
-    <%= f.password_field :password_confirmation, :class=>"form-control"  %>
-  </div>
-  <div>
-    <%= f.submit 'Sign up', :class=>"btn btn-default"  %>
-  </div>
-</div>
 
 
 
 <div class="container">
-<div class="jumbotron col-md-6"">
-<h1>Log In</h1>
-  <div class="form-group">
-    <label>Email:</label>
-    <%= f.text_field :email, :class=>"form-control" %>
+  <div class="jumbotron col-md-6">
+    <h1>Sign Up</h1>
+    <%= render "users/form" %>
   </div>
-  <div class="form-group">
-    <label>Password:</label>
-    <%= f.password_field :password, :class=>"form-control" %>
-
+  <div class="jumbotron col-md-6">
+    <h1>Log In</h1>
+    <%= render 'form' %>
+  </div>
 </div>
-<div>
-  <%= f.submit 'Log In', :class=>"btn btn-default" %>
-</div>
-</div>
-</div>
-</div>
-<% end %>

@@ -1,22 +1,24 @@
 Rails.application.routes.draw do
 
-  get 'addresses/' => 'addresses#index'
-  post 'addresses/' => 'addresses#create'
-  get 'addresses/new' => 'addresses#new', as: :new_address
-  get 'addresses/:id' => 'addresses#show', as: :address
-  get 'addresses/:id/edit' => 'addresses#edit', as: :edit_address
-  put 'addresses/:id' => 'addresses#update'
-  patch 'addresses/:id' => 'addresses#update'
-  delete 'addresses/:id' => 'addresses#destroy'
+  # get 'addresses/' => 'addresses#index'
+  # post 'addresses/' => 'addresses#create'
+  # get 'addresses/new' => 'addresses#new', as: :new_address
+  # get 'addresses/:id' => 'addresses#show', as: :address
+  # get 'addresses/:id/edit' => 'addresses#edit', as: :edit_address
+  # put 'addresses/:id' => 'addresses#update'
+  # patch 'addresses/:id' => 'addresses#update'
+  # delete 'addresses/:id' => 'addresses#destroy'
 
 
+  resources :users do
+    resources :addresses
+  end
 
+  post 'signup' => 'users#create'
 
-post 'signup' => 'users#create'
-
-get 'login' => 'sessions#new'
-post 'login' => 'sessions#create'
-delete 'logout' => 'sessions#destroy'
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
 
 #
 
