@@ -15,31 +15,76 @@
   </div>
 </nav>
 
-
+<div class="container">
 <h1><%= @address.label.capitalize %></h1>
 
-<table>
-  <thead>
-    <td>
-      Label:
-    </td>
-    <td>
-      Address:
-    </td>
-    <td>
-      Memo:
-    </td>
 
+<table class="table">
+  <thead>
+    <tr>
+      <th>Address</th>
+      <th>Balance</th>
+    </tr>
   </thead>
   <tbody>
-    <td>
-      <%= @address.label %>
-    </td>
+  <tr>
     <td>
       <%= @address.loc %>
     </td>
     <td>
-      <%= @address.memo %>
+      <%= @address.balance %>
     </td>
+</tr>
   </tbody>
 </table>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Total Sent</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>
+      <%= @address.total_sent %>
+    </td>
+</tr>
+  </tbody>
+</table>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Total Received</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>
+      <%= @address.total_rec %>
+    </td>
+</tr>
+  </tbody>
+</table>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Total Fees Paid</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>
+      <%= @address.total_fees %>
+    </td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div class="container">
+  <div class="page-header">
+    <h1>Info</h1>
+  </div>
+  <%= @address.memo %>
+</div>

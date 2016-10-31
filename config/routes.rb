@@ -10,9 +10,8 @@ Rails.application.routes.draw do
   delete 'addresses/:id' => 'addresses#destroy'
 
 
-  resources :users do
-    resources :addresses
-  end
+  resources :users
+
 
   post 'signup' => 'users#create'
 
