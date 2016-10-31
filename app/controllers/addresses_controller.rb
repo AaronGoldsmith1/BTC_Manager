@@ -6,7 +6,17 @@ class AddressesController < ApplicationController
 
     def show
 
+      # require 'rest-client'
+      #
+      # begin
+      #   @response = RestClient.get 'https://api.coinprism.com/v1/addresses/'+@address.loc+'?format=JSON '
+      #   @BTC = JSON.parse(@response)["balance"]/100000000.0
+      # rescue
+      #   @BTC = "Invalid Address"
+      # end
     end
+
+
 
     def new
       @address = Address.new

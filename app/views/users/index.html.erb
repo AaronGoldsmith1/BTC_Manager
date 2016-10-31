@@ -1,16 +1,28 @@
-<h1>Users</h1>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+       <a class="navbar-brand">BTC Manager</a>
+    </div>
 
-<ul>
-  <% @users.each do |user| %>
-    <li>
-      <%= user.name %>
-    </li>
-  <% end %>
-</ul>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+      <ul class="nav navbar-nav navbar-right">
+      <li> <%= link_to 'Log Out', logout_path, method: :delete %> </li>
+ <%# if no user, should not display logout %>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<h1>Welcome!</h1>
 
 <% if current_user %>
-  Logged in as: <%= current_user.name %> | <%= link_to 'Log Out', logout_path, method: :delete %>
+<p>  You are logged in as: <%= current_user.name %>  </p>
 <% else %>
   <%= link_to 'Log In', login_path %>
   <%= link_to 'Sign Up', new_user_path %>
 <% end %>
+
+<%= link_to 'Add a new address', new_address_path %> |
+<%= link_to 'View my addresses', addresses_path %> 
