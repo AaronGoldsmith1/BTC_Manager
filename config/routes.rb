@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root 'sessions#new'
+
   get 'addresses/' => 'addresses#index'
   post 'addresses/' => 'addresses#create'
   get 'addresses/new' => 'addresses#new', as: :new_address

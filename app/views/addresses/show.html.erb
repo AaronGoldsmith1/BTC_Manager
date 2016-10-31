@@ -8,6 +8,7 @@
 
 
       <ul class="nav navbar-nav navbar-right">
+            <li> <%= link_to "Home", addresses_path %>
           <li> <%= link_to 'Log Out', logout_path, method: :delete %> </li>
 
       </ul>
@@ -32,7 +33,7 @@
       <%= @address.loc %>
     </td>
     <td>
-      <!-- <%= @BTC %> -->
+  <%= @BTC %> BTC
     </td>
 </tr>
   </tbody>
@@ -47,7 +48,7 @@
   <tbody>
   <tr>
     <td>
-      <%= @address.total_sent %>
+      <%= @total_sent %> BTC
     </td>
 </tr>
   </tbody>
@@ -62,7 +63,7 @@
   <tbody>
   <tr>
     <td>
-      <%= @address.total_rec %>
+      <%= @total_received %> BTC
     </td>
 </tr>
   </tbody>

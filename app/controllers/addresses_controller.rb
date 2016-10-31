@@ -9,14 +9,15 @@ class AddressesController < ApplicationController
 
     def show
 
-      # require 'rest-client'
-      #
-      # begin
-      #   @response = RestClient.get 'https://api.coinprism.com/v1/addresses/'+@address.loc+'?format=JSON '
-      #   @BTC = JSON.parse(@response)["balance"]/100000000.0
-      # rescue
-      #   @BTC = "Invalid Address"
-      # end
+      @response = HTTParty.get('https://blockchain.info/address/'+@address.loc+'?format=json')
+      @BTC = @response.parsed_response['final_balance']/100000000.0
+      @total_received = @response.parsed_response['total_received']/100000000.0
+      @total_sent = @response.parsed_response['total_sent']/100000000.0
+
+      @total_fees =
+
+
+
     end
 
 
