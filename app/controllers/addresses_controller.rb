@@ -1,11 +1,11 @@
 class AddressesController < ApplicationController
-
+  before_action :set_address, only: [:show, :edit, :update, :destroy]
     def index
       @addresses = Address.all
     end
 
     def show
-      @address = Address.find(params[:id])
+
     end
 
     def new
@@ -26,12 +26,11 @@ class AddressesController < ApplicationController
     end
 
     def edit
-      @address = Address.find(params[:id])
 
     end
 
     def update
-      @address = Address.find(params[:id])
+
       if @address.update_attributes(address_params)
         redirect_to @address
       else
@@ -50,6 +49,6 @@ class AddressesController < ApplicationController
     end
 
     def set_address
-      @address = address.find(params[:id])
+      @address = Address.find(params[:id])
     end
   end
