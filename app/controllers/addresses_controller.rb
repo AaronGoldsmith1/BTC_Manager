@@ -1,7 +1,10 @@
 class AddressesController < ApplicationController
   before_action :set_address, only: [:show, :edit, :update, :destroy]
     def index
-      @addresses = Address.all
+
+
+      @user = User.find_by(id: session[:user_id])
+      @addresses = @user.addresses
     end
 
     def show
