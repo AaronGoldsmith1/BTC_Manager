@@ -36,3 +36,7 @@
 3. Type 'bundle install'
 4. Type 'rails s'
 5. In web browser, navigate to: 'localhost:3000'
+
+###Or Visit: https://btcmanager.herokuapp.com/
+
+
