@@ -29,6 +29,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'httparty', '~> 0.13.7'
 gem 'rest-client'
+gem 'rqrcode_png'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -19,7 +19,7 @@
 <h1>My Bitcoin Addresses</h1>
 <% @addresses.each do |address| %>
   <ul class="list-group">
-  <li class="list-group-item">  <%= link_to address.label.capitalize, address_path(address) %> <span class="badge" style="background-color:white;">
+  <li class="list-group-item">  <%= link_to address.label.capitalize, address_path(address) %> <span class="badge" >
       <%= link_to 'Edit /', edit_address_path(address) %>
       <%= link_to 'Delete', address, method: :delete, data: {confirm: 'Are you sure?'} %> </span> </li>
 </ul>

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'sessions#new'
+  root "sessions#new"
 
   get 'addresses/' => 'addresses#index'
   post 'addresses/' => 'addresses#create'

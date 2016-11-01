@@ -1,4 +1,6 @@
+
 class AddressesController < ApplicationController
+
   before_action :set_address, only: [:show, :edit, :update, :destroy]
     def index
 
@@ -14,7 +16,7 @@ class AddressesController < ApplicationController
       @total_received = @response.parsed_response['total_received']/100000000.0
       @total_sent = @response.parsed_response['total_sent']/100000000.0
 
-      @total_fees =
+      #@total_fees = .each +=
 
 
 
