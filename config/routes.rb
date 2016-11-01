@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  root "sessions#new"
+  root 'welcome#index'
+
+
 
   get 'addresses/' => 'addresses#index'
   post 'addresses/' => 'addresses#create'
@@ -17,10 +19,12 @@ Rails.application.routes.draw do
 
   post 'signup' => 'users#create'
 
-  get 'login' => 'sessions#index'
+
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
+
+
 
 
 

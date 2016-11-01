@@ -8,6 +8,7 @@
 
 
       <ul class="nav navbar-nav navbar-right">
+          <li> <%= link_to "Home", users_path %> </li>
       <li> <%= link_to 'Log Out', logout_path, method: :delete %> </li>
  <%# if no user, should not display logout %>
       </ul>
@@ -15,8 +16,11 @@
   </div>
 </nav>
 
+
 <div class="container">
-<h1>My Bitcoin Addresses</h1>
+  <h1>My Bitcoin Addresses</h1>
+  <div class="jumbotron">
+
 <% @addresses.each do |address| %>
   <ul class="list-group">
   <li class="list-group-item">  <%= link_to address.label.capitalize, address_path(address) %> <span class="badge" >
@@ -24,6 +28,6 @@
       <%= link_to 'Delete', address, method: :delete, data: {confirm: 'Are you sure?'} %> </span> </li>
 </ul>
   <% end %>
-
+</div>
 </div>
 <%= link_to 'Add a new address', new_address_path %>

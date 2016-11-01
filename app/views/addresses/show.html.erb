@@ -8,8 +8,12 @@
 
 
       <ul class="nav navbar-nav navbar-right">
-            <li> <%= link_to "Home", addresses_path %>
-          <li> <%= link_to 'Log Out', logout_path, method: :delete %> </li>
+            <li> <%= link_to "Home", users_path %>
+            <li> <%= link_to "My Addresses", addresses_path %>
+            <li> <%= link_to 'Edit Address', edit_address_path %> </li>
+            <li> <%= link_to 'Delete Address', address_path, method: :delete, data: {confirm: 'Are you sure?'} %>
+            <li> <%= link_to 'Log Out', logout_path, method: :delete %> </li>
+
 
       </ul>
     </div>
@@ -17,9 +21,9 @@
 </nav>
 
 <div class="container">
-<h1><%= @address.label.capitalize %></h1>
+<h1><%= @address.label.capitalize %><img src='https://blockchain.info/qr?data=<%= @address.loc %>=200' style="width:100px; margin-left: 100px" ></h1>
 
-<img src='https://blockchain.info/qr?data=<%= @address.loc %>=200' style="width:100px;" >
+
 <table class="table">
   <thead>
     <tr>
@@ -68,7 +72,7 @@
 </tr>
   </tbody>
 </table>
-<table class="table">
+<!-- <table class="table">
   <thead>
     <tr>
       <th>Total Fees Paid</th>
@@ -81,7 +85,7 @@
     </td>
 </tr>
   </tbody>
-</table>
+</table> -->
 </div>
 <div class="container">
   <div class="page-header">

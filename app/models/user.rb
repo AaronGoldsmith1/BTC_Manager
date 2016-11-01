@@ -1,5 +1,6 @@
 require 'bcrypt'
 class User < ApplicationRecord
+  validates :email, presence: true, uniqueness:true
   include BCrypt
 
   has_many :addresses, dependent: :destroy
