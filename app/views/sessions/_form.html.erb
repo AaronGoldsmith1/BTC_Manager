@@ -1,4 +1,7 @@
-<%= form_for :login, :url => {:action => :create} do |f| %>
+<% flash.each do |key, value| %>
+  <%= content_tag :div, value, class: "flash #{key}" %>
+<% end %>
+<%= form_for @login, :url => {:action => :create} do |f| %>
 
   <div class="form-group">
     <label>Email:</label>

@@ -10,14 +10,16 @@ class AddressesController < ApplicationController
     end
 
     def show
-
+      begin
       @response = HTTParty.get('https://blockchain.info/address/'+@address.loc+'?format=json')
       @BTC = @response.parsed_response['final_balance']/100000000.0
       @total_received = @response.parsed_response['total_received']/100000000.0
       @total_sent = @response.parsed_response['total_sent']/100000000.0
 
       #@total_fees = .each +=
-
+    rescue
+      @BTC = "Invalid Address"
+    end
 
 
     end
@@ -37,7 +39,10 @@ class AddressesController < ApplicationController
         #render json: @address
         redirect_to action: "show", id: @address.id
       else
-        render json:@address
+        flash[:error] = @address.errors.full_messages.to_sentence
+        render :new
+
+        #render json:@address
       end
     end
 
