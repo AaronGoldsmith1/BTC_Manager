@@ -21,7 +21,7 @@
 </nav>
 
 <div class="container">
-<h1><%= @address.label.capitalize %><img src='https://blockchain.info/qr?data=<%= @address.loc %>=200' style="width:100px; margin-left: 100px" ></h1>
+<h1><%= @address.label.capitalize %><img src='https://blockchain.info/qr?data=<%= @address.loc %>=200' style="width:100px; float: right;" ></h1>
 
 
 <table class="table">
@@ -37,7 +37,7 @@
       <%= @address.loc %>
     </td>
     <td>
-  <%= @BTC %> BTC
+  <%= number_with_delimiter(@BTC, :delimiter => ',') %> BTC
     </td>
 </tr>
   </tbody>
@@ -52,7 +52,7 @@
   <tbody>
   <tr>
     <td>
-      <%= @total_sent %> BTC
+      <%= number_with_delimiter(@total_sent, :delimiter => ',') %> BTC
     </td>
 </tr>
   </tbody>
@@ -67,7 +67,7 @@
   <tbody>
   <tr>
     <td>
-      <%= @total_received %> BTC
+      <%= number_with_delimiter(@total_received, :delimiter => ',') %> BTC
     </td>
 </tr>
   </tbody>
