@@ -8,6 +8,8 @@
 
 
       <ul class="nav navbar-nav navbar-right">
+        <li> <%= link_to "Home", users_path %>
+        <li> <%= link_to "My Addresses", addresses_path %>
         <li> <%= link_to 'Log Out', logout_path, method: :delete %> </li>
 
       </ul>
@@ -18,9 +20,7 @@
 <div class="jumbotron">
 <h1>New Bitcoin Address</h1>
 
-logged in as <%= @user_id %>
+
 
 <%= render 'form' %>
 </div>
-
-<%#<%= link_to 'Back', address_path(@address) %>

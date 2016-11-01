@@ -2,8 +2,6 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-
-
   get 'addresses/' => 'addresses#index'
   post 'addresses/' => 'addresses#create'
   get 'addresses/new' => 'addresses#new', as: :new_address
@@ -13,12 +11,8 @@ Rails.application.routes.draw do
   patch 'addresses/:id' => 'addresses#update'
   delete 'addresses/:id' => 'addresses#destroy'
 
-
   resources :users
-
-
   post 'signup' => 'users#create'
-
 
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'

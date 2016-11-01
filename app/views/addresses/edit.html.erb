@@ -8,6 +8,8 @@
 
 
       <ul class="nav navbar-nav navbar-right">
+        <li> <%= link_to "Home", users_path %>
+        <li> <%= link_to "My Addresses", addresses_path %>
         <li> <%= link_to 'Log Out', logout_path, method: :delete %> </li>
 
       </ul>
@@ -23,4 +25,3 @@
 
 
 </div>
-<%= link_to 'Back', addresses_path %>
