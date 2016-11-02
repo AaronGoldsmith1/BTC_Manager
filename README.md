@@ -4,9 +4,7 @@
 
 ##Overview
 
-### Bitcoin addresses are strings of 25-35 characters, and encoded in a format called Base58. They consist of random digits and uppercase and lowercase letters, with the exception of the uppercase letter "O", uppercase letter "I", lowercase letter "l", and the number "0" to prevent visual ambiguity.  For example:
-
-```1CK6KHY6MHgYvmRQ4PAafKYDrg1ejbH1cE```
+### Bitcoin addresses are strings of 25-35 characters, and encoded in a format called Base58. They consist of random digits and uppercase and lowercase letters, with the exception of the uppercase letter "O", uppercase letter "I", lowercase letter "l", and the number "0" to prevent visual ambiguity.  For example: "1CK6KHY6MHgYvmRQ4PAafKYDrg1ejbH1cE"
 
 ### Like e-mail addresses, you can send bitcoins to a person by sending bitcoins to one of their addresses. However, unlike e-mail addresses, people have many different Bitcoin addresses, often for different purposes.
 
