@@ -39,10 +39,8 @@ class AddressesController < ApplicationController
 
         redirect_to action: "show", id: @address.id
       else
-        flash.now[:error] = @address.errors.full_messages.to_sentence
+        flash.now[:error] = @address.errors.full_messages.to_sentence.sub! "Loc", "Address"
         render :new
-
-        #render json:@address
       end
     end
 
