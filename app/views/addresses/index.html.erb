@@ -9,6 +9,7 @@
 
       <ul class="nav navbar-nav navbar-right">
           <li> <%= link_to "Home", users_path %> </li>
+          <li><%= link_to 'Add New Address', new_address_path %></li>
       <li> <%= link_to 'Log Out', logout_path, method: :delete %> </li>
  <%# if no user, should not display logout %>
       </ul>
@@ -24,10 +25,9 @@
 <% @addresses.each do |address| %>
   <ul class="list-group">
   <li class="list-group-item">  <%= link_to address.label.capitalize, address_path(address) %> <span class="badge" >
-      <%= link_to 'Edit /', edit_address_path(address) %>
+      <%= link_to 'Edit', edit_address_path(address) %>
       <%= link_to 'Delete', address, method: :delete, data: {confirm: 'Are you sure?'} %> </span> </li>
 </ul>
   <% end %>
 </div>
 </div>
-<%= link_to 'Add a new address', new_address_path %>
