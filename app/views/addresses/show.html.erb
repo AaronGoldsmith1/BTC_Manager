@@ -34,7 +34,7 @@
   <tbody>
   <tr>
     <td>
-      <%= @address.loc %>
+      <%= link_to @address.loc, "https://blockchain.info/address/#{@address.loc}" %>
     </td>
     <td>
   <%= number_with_delimiter(@BTC, :delimiter => ',') %>
