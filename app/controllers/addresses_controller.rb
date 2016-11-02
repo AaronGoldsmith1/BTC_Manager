@@ -36,10 +36,10 @@ class AddressesController < ApplicationController
         @address.user_id = session[:user_id]
 
       if @address.save
-        #render json: @address
+
         redirect_to action: "show", id: @address.id
       else
-        flash[:error] = @address.errors.full_messages.to_sentence
+        flash.now[:error] = @address.errors.full_messages.to_sentence
         render :new
 
         #render json:@address

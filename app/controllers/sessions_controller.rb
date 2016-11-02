@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
       #redirect_to users_path
     else
       @user = User.new
-      flash[:alert] = "Password and/or Email incorrect"
+      flash.now[:alert] = "Password and/or Email Incorrect"
       render :new
 
 

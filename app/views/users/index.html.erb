@@ -11,6 +11,7 @@
   </div>
 </nav>
 
+
 <div class="jumbotron text-center">
 
 <h1>Welcome!</h1>
@@ -22,8 +23,13 @@
   <%= link_to 'Sign Up', new_user_path %>
 <% end %>
 
+  <div class="container">
+<div class="well well-sm">
+
 <%= link_to 'Add A New Address', new_address_path %> |
 <%= link_to 'View My Addresses', addresses_path %> |
 <%= link_to 'Edit My Info', edit_user_path(current_user) %> |
 <%= link_to 'Delete My Account', user_path(current_user), method: :delete, data: {confirm: "are you sure?"} %>
+</div>
+</div>
 </div>
