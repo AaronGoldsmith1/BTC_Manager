@@ -1,15 +1,29 @@
-<%# if current_user == @user %>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+       <a class="navbar-brand">BTC Manager</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+      <li> <%= link_to 'Log Out', logout_path, method: :delete %> </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-  <h1><%= @user.name %>'s Profile</h1>
+<div class="jumbotron text-center">
 
-  Email: <%= @user.email %>
+<h1>Welcome!</h1>
 
-<%# else %>
+<% if current_user %>
+<p>  You are logged in as: <%= current_user.name %>  </p>
+<% else %>
+  <%= link_to 'Log In', login_path %>
+  <%= link_to 'Sign Up', new_user_path %>
+<% end %>
 
-  <!-- <h1>YOU SHALL NOT PASS!</h1> -->
-
-<%# end %>
-
-<%= link_to 'Back to the list!', users_path %>
-<br>
-<%= link_to 'Delete your account', @user, method: :delete, data: {confirm: 'Are you sure?'} %>
+<%= link_to 'Add A New Address', new_address_path %> |
+<%= link_to 'View My Addresses', addresses_path %> |
+<%= link_to 'Edit My Info', edit_user_path(current_user) %> |
+<%= link_to 'Delete My Account', user_path(current_user), method: :delete, data: {confirm: "are you sure?"} %>
+</div>
