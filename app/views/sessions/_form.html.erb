@@ -1,6 +1,8 @@
-<% flash.each do |key, value| %>
-  <%= content_tag :div, value, class: "flash #{key}" %>
-<% end %>
+
+<% if flash[:alert] -%>
+  <% flash.each do |key, value| %>
+  <%= content_tag :div, value, class: "flash #{key} #{key}-success" %>
+<% end %>  <% end %>
 <%= form_for @user, :url => {:action => :create} do |f| %>
 
   <div class="form-group">
