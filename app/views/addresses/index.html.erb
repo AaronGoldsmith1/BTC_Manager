@@ -41,9 +41,23 @@
   $(document).ready(function() {
     var clip = new ZeroClipboard($(".copy-address"))
     clip.on("aftercopy", function(event) {
-      alert("Copied to clipboard!")
+    $('#myModal').modal('show'); 
     })
   });
 
 
 </script>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+        Address Copied!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
