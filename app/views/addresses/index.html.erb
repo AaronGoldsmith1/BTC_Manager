@@ -25,9 +25,22 @@
 <% @addresses.each do |address| %>
   <ul class="list-group">
   <li class="list-group-item">  <%= link_to address.label.capitalize, address_path(address) %> <span class="badge" >
+
+
+
+
       <%= link_to 'Edit', edit_address_path(address) %>
-      <%= link_to 'Delete', address, method: :delete, data: {confirm: 'Are you sure?'} %> </span> </li>
+      <%= link_to 'Delete', address, method: :delete, data: {confirm: 'Are you sure?'} %>
+      <p class="copy-address" data-clipboard-text=<%= address.loc %>> Copy </p> </span></li>
 </ul>
   <% end %>
 </div>
 </div>
+
+<script>
+  $(document).ready(function() {
+    var clip = new ZeroClipboard($(".copy-address"))
+  });
+
+
+</script>

@@ -20,3 +20,33 @@
 @import "bootstrap";
 @import "addresses";
 @import "welcome";
+
+
+.badge > p {
+  color: #000;
+  float: left;
+  clear: none;
+  font-size: 12px;
+  font-weight: bold;
+  margin-right:5px;
+  margin-bottom: 0;
+}
+
+.copy-address:hover {
+
+
+}
+
+.copy-address:focus {
+
+
+}
+
+.copy-address:active {
+
+  color: #fff;
+  background-color: #000;
+  text-decoration: underline;
+
+
+}

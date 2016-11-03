@@ -1,6 +1,9 @@
 <% flash.each do |key, value| %>
-  <%= content_tag :div, value, class: "flash #{key}" %>
+  <%= content_tag :div, value, class: "flash alert  alert-success" %>
 <% end %>
+
+
+
 <%= form_for @address do |f| %>
 
   <div class="container">
