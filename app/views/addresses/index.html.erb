@@ -31,7 +31,7 @@
 
       <%= link_to 'Edit', edit_address_path(address) %>
       <%= link_to 'Delete', address, method: :delete, data: {confirm: 'Are you sure?'} %>
-      <p class="copy-address" data-clipboard-text=<%= address.loc %>> Copy </p> </span></li>
+  <p class="copy-address" data-clipboard-text=<%= address.loc %>> Copy </p> </span></li>
 </ul>
   <% end %>
 </div>
@@ -40,6 +40,9 @@
 <script>
   $(document).ready(function() {
     var clip = new ZeroClipboard($(".copy-address"))
+    clip.on("aftercopy", function(event) {
+      alert("Copied to clipboard!")
+    })
   });
 
 
