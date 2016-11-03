@@ -5,15 +5,26 @@
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+
+        <li> <%= link_to "Bitcoin Addresses?", "https://en.bitcoin.it/wiki/Address" %></li>
+        <li><%= link_to 'Log In', login_path %></li>
+        <li><%= link_to 'Sign Up', new_user_path %></li>
 
 
-      
+
+
+      </ul>
+
     </div>
   </div>
 </nav>
 
+
+
 <div class="container">
   <div class="jumbotron text-center">
+  <img src="btc.png" />
     <h1>BTC Manager</h1>
     <p>Store your Bitcoin addresses!  Keep track of your balances!</p>
   </div>
@@ -21,8 +32,26 @@
 
 
 
+<div class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+      <p class="navbar-text pull-left">© 2016 - Site Built By Aaron Goldsmith
+           <!-- <a href="http://tinyurl.com/tbvalid" target="_blank" >HTML 5 Validation</a> -->
+      </p>
 
-<div class="welcome">
+      <!-- <a href="http://youtu.be/zJahlKPCL9g" class="navbar-btn btn-danger btn pull-right">
+      <span class="glyphicon glyphicon-star"></span>Github</a> -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="welcome">
 <div class="container">
 
 
@@ -39,7 +68,8 @@
 
 <%= link_to 'Sign Up', new_user_path %>
 
+
 </div>
 </div>
 </div>
-</div>
+</div> -->
