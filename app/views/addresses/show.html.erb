@@ -8,8 +8,9 @@
 
 
       <ul class="nav navbar-nav navbar-right">
-            <li> <%= link_to "Home", users_path %>
-            <li> <%= link_to "My Addresses", addresses_path %>
+            <li> <%= link_to "Home", users_path %></li>
+            <li><%= link_to 'Add New Address', new_address_path %></li>
+            <li> <%= link_to "My Addresses", addresses_path %></li>
             <li> <%= link_to 'Edit Address', edit_address_path %> </li>
             <li> <%= link_to 'Delete Address', address_path, method: :delete, data: {confirm: 'Are you sure?'} %>
             <li> <%= link_to 'Log Out', logout_path, method: :delete %> </li>
@@ -21,7 +22,7 @@
 </nav>
 
 <div class="container">
-<h1><%= @address.label.capitalize %><img src='https://blockchain.info/qr?data=<%= @address.loc %>=200' style="width:100px; float: right;" ></h1>
+<h1><%= @address.label.capitalize %><img class="qrCode" src='https://blockchain.info/qr?data=<%= @address.loc %>'></h1>
 
 
 <table class="table">
