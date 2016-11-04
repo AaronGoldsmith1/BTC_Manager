@@ -32,7 +32,7 @@
 * **Postico db clilent** - (database vizualization application)
 * **Bootstrap** - (front-end framework)
 * **HTML5/SCSS** - (structure and content of webpages)
-* **[Blockchain.info] (blockchain.info) API** - (bitcoin wallet and block explorer service)
+* **Blockchain.info API** - (bitcoin wallet and block explorer service)
 * **'HTTParty' gem** - (making HTTP GET requests with API)
 * **'bcrypt' gem** - (password hashing)
 * **'zeroclipboard' gem** - (copying text to clipboard)
