@@ -15,8 +15,6 @@ class AddressesController < ApplicationController
       @BTC = @response.parsed_response['final_balance']/100000000.0
       @total_received = @response.parsed_response['total_received']/100000000.0
       @total_sent = @response.parsed_response['total_sent']/100000000.0
-
-      #@total_fees = .each +=
     rescue
       @BTC = "Invalid Address"
     end
